@@ -39,10 +39,18 @@ public class Program {
 		System.out.println();
 
 		System.out.println("INSTALLMENTS");
+		System.out.println("===================");
 		for (Installment x : contract.getInstallment()) {
 			System.out.println(x);
 			
 		}
+		double soma = 0.0;
+		for (Installment x : contract.getInstallment()) {
+			soma += x.getAmount();
+		}
+		System.out.println("===================");
+		System.out.println("     Total: " + String.format("%.2f", soma));
+		
 		sc.close();
 	}
 
